@@ -1,0 +1,29 @@
+<div class="layout-column align-items-center mt-50">
+  <section class="layout-row align-items-center justify-content-center">
+    <form class="forms-sample" [formGroup]="formGroup">
+      <input
+        type="number"
+        class="large"
+        formControlName="year"
+        placeholder="Enter Year eg 2015"
+        data-test-id="app-input"
+      />
+    </form>
+    <button (click)="onSearchSubmit()" class="" data-test-id="submit-button">
+      Search
+    </button>
+  </section>
+
+
+
+  <div *ngIf="moviesArrList.length > 0">
+
+  <ul *ngFor="let loop of moviesArrList" class="mt-50 styled" data-test-id="movieList">
+    <li class="slide-up-fade-in py-10">{{loop.Title}}</li>
+  </ul>
+
+  </div>
+
+  <div *ngIf="moviesArrList.length == 0" class="mt-50 slide-up-fade-in" data-test-id="no-result"></div>
+
+</div>
