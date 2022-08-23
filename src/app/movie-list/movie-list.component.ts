@@ -19,7 +19,7 @@ export class MovieListComponent implements OnInit {
         "",
         Validators.compose([
           Validators.required,
-          Validators.maxLength(40),
+          Validators.maxLength(4),
           Validators.minLength(4),
         ]),
       ],
